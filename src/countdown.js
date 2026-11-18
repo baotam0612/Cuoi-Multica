@@ -1,0 +1,2 @@
+export function getCountdown(targetDate, now = new Date()) { const remaining = Math.max(0, new Date(targetDate).getTime() - now.getTime()); const seconds = Math.floor(remaining / 1000); return { days: Math.floor(seconds / 86400), hours: Math.floor((seconds % 86400) / 3600), minutes: Math.floor((seconds % 3600) / 60), seconds: seconds % 60, isComplete: remaining === 0 }; }
+export function formatCountdown(value) { return String(value).padStart(2, '0'); }
